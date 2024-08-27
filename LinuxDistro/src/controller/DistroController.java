@@ -29,12 +29,12 @@ public class DistroController
                 while (line != null) {
                     String[] split = line.split("=");
                     if (split[0].equals("NAME"))
-                        versao.append("  Nome = " + split[1]);
+                        versao.append("  Nome = " + split[1] + "\n");
                     if (split[0].equals("VERSION"))
-                        versao.append("Versão = " + split[1]);
+                        versao.append("Versão = " + split[1] + "\n");
                     line = buffer.readLine();
                 }
-                System.out.println(versao.toString());
+                System.out.print(versao.toString());
                 buffer.close();
                 output.close();
             } catch (Exception e) {
